@@ -24,5 +24,6 @@
         
         <button class="btn btn-success">Login</button>
     </form>
+    Don't have an account?<a href="{{route('auth.showRegistration')}}"> Sign Up</a>
 </div>
 @endsection

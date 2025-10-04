@@ -20,5 +20,6 @@
         <input type="password" name="password_confirmation" placeholder="Enter Confirm Password" class="form-control mb-2">
         <button class="btn btn-primary">Register</button>
     </form>
+    Already have an account?<a href="{{route('auth.showLogin')}}"> Sign In</a>
 </div>
 @endsection

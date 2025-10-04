@@ -2,6 +2,7 @@
 # Features i used here
 - Manage products with name, SKU, quantity, and price.
 - Record stock in/out transactions and view history.
+- Low stock notifications alert.
 - Roles & permissions: Admin (full access), Inventory Staff (Create,View & Update), Viewer (read-only).
 - Access control enforced via "Spatie Laravel Permission".
 
