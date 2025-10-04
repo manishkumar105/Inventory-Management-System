@@ -22,7 +22,7 @@
         <input type="text" name="email" placeholder="Enter Email" class="form-control mb-2">
         <input type="password" name="password" placeholder="Enter Password" class="form-control mb-2">
         
-        <button class="btn btn-success">Login</button>
+        <button class="btn btn-success">Sign In</button>
     </form>
     Don't have an account?<a href="{{route('auth.showRegistration')}}"> Sign Up</a>
 </div>

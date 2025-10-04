@@ -18,7 +18,7 @@
         <input type="text" name="email" placeholder="Enter Email" class="form-control mb-2">
         <input type="password" name="password" placeholder="Enter Password" class="form-control mb-2">
         <input type="password" name="password_confirmation" placeholder="Enter Confirm Password" class="form-control mb-2">
-        <button class="btn btn-primary">Register</button>
+        <button class="btn btn-primary">Sign Up</button>
     </form>
     Already have an account?<a href="{{route('auth.showLogin')}}"> Sign In</a>
 </div>
