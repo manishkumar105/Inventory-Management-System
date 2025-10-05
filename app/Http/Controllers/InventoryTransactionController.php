@@ -14,14 +14,16 @@ class InventoryTransactionController extends Controller
     public function __construct()
     {
         $this->middleware('authMiddleware');
-         $this->middleware('permission:view inventory')->only(['index','history']);
+        $this->middleware('permission:view inventory')->only(['index','history']);
         $this->middleware('permission:create inventory')->only(['create', 'store']);
         $this->middleware('permission:edit inventory')->only(['edit', 'update']);
         $this->middleware('permission:delete inventory')->only(['destroy']);
+        
     }
     public function create(Product $product)
     {
         return view('transactions.create', compact('product'));
+       
     }
 
     public function store(Request $request, Product $product)
@@ -45,6 +47,7 @@ class InventoryTransactionController extends Controller
             'note' => $request->note,
             'user_id'=> Auth::id(),
         ]);
+        
 
         // Update product quantity
         if ($request->type === 'stock_in') {

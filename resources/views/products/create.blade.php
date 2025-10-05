@@ -3,6 +3,11 @@
 @section('content')
 <div class="container">
     <h2>Add Product</h2>
+    @foreach($errors->all() as $error)
+          <ul class = "alert alert-danger">
+              {{$error}}  
+            </ul>
+    @endforeach
      <div class="text-end mb-2">
         <a href="{{ route('products.index') }}" class="btn btn-primary mb-2">Back</a>
     </div>

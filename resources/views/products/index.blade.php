@@ -4,6 +4,8 @@
 <div class="container">
     <h2>Inventory</h2>
 
+   
+
     {{--  Global Low Stock Alert --}}
     @if($products->where('quantity', '<=', 5)->count() > 0)
         <div class="alert alert-danger">
