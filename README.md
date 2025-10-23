@@ -25,6 +25,7 @@
 - PHP 8.2
 - Spatie Laravel Permission(latest:6+)
 
-# Don't forget to run migration & Seeder and Newly registered users get Viewer role by default
+<small>** Don't forget to run migrations & seeders. Newly registered users get the _Viewer_ role by default.**</small>
+
  
 
