@@ -11,7 +11,9 @@
      <div class="text-end mb-2">
             <a href="{{ route('products.index') }}" class="btn btn-primary mb-2">Back</a>
     </div>
-
+    @if(session('error'))
+        <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
     <form method="POST" action="{{ route('transactions.store', $product) }}">
         @csrf
         <select name="type" class="form-control mb-2">
