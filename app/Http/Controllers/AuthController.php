@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserRegistered;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +25,8 @@ class AuthController extends Controller
         $validated['password'] = Hash::make($request->password);
         $user = User::create($validated);
         $user->assignRole('inventory_viewer'); // only view permission
+        //fire event
+        event(new UserRegistered($user));
         return redirect()->route('auth.showLogin')->with('success','Registartion Done! , Please Login');
     }
 
